@@ -110,12 +110,29 @@ td {
 .SingIn a {
     padding: 8px 16px; 
     border: 1px solid #ccc;
-    border-radius: 8px; 
+    border-radius: 15px; 
     text-decoration: none; 
     display: inline-block; 
     transition: background-color 0.3s;
 }
 
-.LogIn{
+    .SingIn a:hover {
+        background-color: #f0f0f0; 
+    }
 
+.LogIn a {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+    .LogIn a:hover {
+        background-color: #f0f0f0;
+        color: red;
+    }
+
+.gap-{
+    padding: 4px;
 }
