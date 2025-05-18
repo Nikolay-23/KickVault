@@ -1,0 +1,38 @@
+﻿@using KickVault.ViewModels
+@model ItemViewModel
+
+<h2>Add a New Item</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="ImageURL">Select Photo:</label>
+        <input asp-for="ImageURL" class="form-control" />
+        <span asp-validation-for="ImageURL" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Model">Model</label>
+        <input asp-for="Model" class="form-control" />
+        <span asp-validation-for="Model" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Description">Description</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Price">Price</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Size">Size</label>
+        <input asp-for="Size" class="form-control" min="1" max="45" />
+        <span asp-validation-for="Size" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Create Item</button>
+</form>
+
+<a asp-action="Index">Back to Items List</a>
+
+
+
