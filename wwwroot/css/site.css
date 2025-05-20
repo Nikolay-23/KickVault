@@ -130,9 +130,41 @@ td {
 }
     .LogIn a:hover {
         background-color: #f0f0f0;
-        color: red;
     }
 
 .gap-{
     padding: 4px;
+}
+.title-of-LogIn{
+    margin-left: 120px;
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+.-LogIn- {
+    width: 540px;
+    height: 400px;
+    margin: 40px auto 0 auto;
+    background: white;
+    padding-right: 200px 100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.move-input-1{
+    margin-left: 125px;
+    margin-top: 60px;
+}
+
+.input-width{
+    width: 300px;
+}
+
+.log-in-button{
+    width: 300px;
+}
+.link-to-register{
+    float:
 }
