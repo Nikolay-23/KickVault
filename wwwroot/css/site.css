@@ -144,7 +144,7 @@ td {
 
 .-LogIn- {
     width: 540px;
-    height: 400px;
+    height: 430px;
     margin: 40px auto 0 auto;
     background: white;
     padding-right: 200px 100px;
@@ -165,6 +165,21 @@ td {
 .log-in-button{
     width: 300px;
 }
-.link-to-register{
-    float:
+.link-to-register {
+    white-space: nowrap;
+    margin-left: 70px;
+}
+
+.link-to-register-a{
+    text-align:center;
+    margin-left: 10px;
+    margin-top: 40px;
+    color: blue;
+}
+
+.cart{
+    position:relative;
+    right: 50px;
+    top:5px;
+    font-size: 30px;
 }
