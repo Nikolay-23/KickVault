@@ -2,13 +2,13 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Log In";
 }
 <div class="body-fm">
  <div class="-LogIn-">
- <div class="row">
+  <div class="row">
             <div class="title-of-LogIn">
-                <h4>Log In</h4>
+                <h4>@ViewData["Title"]</h4>
             </div>
        <div class="col-md-4 move-input-1">
         <section>
@@ -31,9 +31,9 @@
         </section>
                 <p class="link-to-register">Need an account?<a href="https://localhost:7035/Identity/Account/Register" class="link-to-register-a">SignUp</a></p>
     </div>
-  </div>
+   </div>  
  </div>
-</div>
+</div>        
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
