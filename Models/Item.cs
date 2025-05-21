@@ -4,11 +4,6 @@ namespace KickVault.Models
 {
     public class Item
     {
-        public Item()
-        {
-            OrderItems = new HashSet<OrderItem>();
-        }
-        [Key]
         public int Id { get; set; }
         public string ImageURL { get; set; } = null!;
 
@@ -21,5 +16,6 @@ namespace KickVault.Models
         public int? Size { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        public ICollection<UserItem> UserItems { get; set; } = new List<UserItem>();
     }
 }

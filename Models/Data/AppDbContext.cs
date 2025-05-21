@@ -17,7 +17,7 @@ namespace KickVault.Models.Data
         public DbSet<Category> Categorys { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Item> Items { get; set; }
-
+        public DbSet<UserItem> UserItems { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -35,6 +35,20 @@ namespace KickVault.Models.Data
                 .HasOne(oi => oi.Item)
                 .WithMany()
                 .HasForeignKey(oi => oi.ItemId);
+
+            modelBuilder.Entity<UserItem>()
+                .HasKey(ui => new { ui.ItemId, ui.UserId });
+
+            modelBuilder.Entity<UserItem>()
+                .HasOne(ui => ui.User)
+                .WithMany()
+                .HasForeignKey(ui => ui.UserId);
+
+            modelBuilder.Entity<UserItem>()
+                .HasOne(ui => ui.Item)
+                .WithMany()
+                .HasForeignKey(ui => ui.ItemId);
+                
         }
     }
 }
