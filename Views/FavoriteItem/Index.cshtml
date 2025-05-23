@@ -27,7 +27,10 @@
                 <td>@item.Size</td>
                 <td>@item.ReleaseDate</td>
                 <td>
-                    <a asp-action="RemoveFavoriteItem" asp-route-itemId="@item.ItemId" class="btn btn-danger">Remove</a>
+                    <form asp-controller="FavoriteItem" asp-action="RemoveFromFavoriteItem" method="post" class="d-inline">
+                        <input type="hidden" name="itemId" value="@item.ItemId" />
+                        <button type="submit" class="btn btn-danger">Remove</button>
+                    </form>
                 </td>
             </tr>
         }

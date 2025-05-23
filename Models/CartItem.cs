@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KickVault.Models
 {
@@ -6,7 +7,7 @@ namespace KickVault.Models
     {
         public int Id { get; set; }
         public string? UserId { get; set; }
-        //public ApplicationUser? User { get; set; }
+        public IdentityUser? User { get; set; }
 
         public int ItemId { get; set; }
         [ForeignKey(nameof(ItemId))]

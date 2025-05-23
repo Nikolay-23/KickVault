@@ -28,9 +28,9 @@
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
                     @if(User?.Identity?.IsAuthenticated ?? false)
                     {
-                        <form asp-asp-controller="FavoriteItem" asp-action="AddFavoriteItem" method="post" class="d-inline">
+                        <form asp-controller="FavoriteItem" asp-action="AddToFavoriteItem" method="post" class="d-inline">
                             <input type="hidden" name="itemId" value="@item.Id" />
-                            <button type="submit" class="btn btn-warning">+FavoriteItme</button>
+                            <button type="submit" class="btn btn-warning">+Favorite Item</button>
                         </form>
                     }
                 </td>

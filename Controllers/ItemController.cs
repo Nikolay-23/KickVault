@@ -1,7 +1,9 @@
 ﻿using KickVault.Models;
 using KickVault.Models.Data;
 using KickVault.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace KickVault.Controllers
@@ -10,7 +12,7 @@ namespace KickVault.Controllers
     {
 
         private readonly AppDbContext _context;
-
+        
         public ItemController(AppDbContext context)
         {
             _context = context;
@@ -47,6 +49,7 @@ namespace KickVault.Controllers
             {
                 var items = new Item
                 {
+                    Id = viewModel.Id,
                     ImageURL = viewModel.ImageURL,
                     Model = viewModel.Model,
                     Description = viewModel.Description,
@@ -63,5 +66,6 @@ namespace KickVault.Controllers
             }
             return View(viewModel);
         }
+
     }
 }
