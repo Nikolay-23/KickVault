@@ -51,7 +51,8 @@ namespace KickVault.Controllers
                     Model = viewModel.Model,
                     Description = viewModel.Description,
                     Price = viewModel.Price,
-                    Size = viewModel.Size
+                    Size = viewModel.Size,
+                    ReleaseDate = viewModel.ReleaseDate
                 };
 
                 _context.Items.Add(items);

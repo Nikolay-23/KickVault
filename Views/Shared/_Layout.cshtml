@@ -30,6 +30,12 @@
                         <li class="nav-item" id="home-ui">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Clothes" asp-action="Index">Clothes</a>
                         </li>
+                        @if(User?.Identity?.IsAuthenticated ?? false) //Only show if user is logged in
+                        {
+                            <li class="nav-item" id="home-ui">
+                                <a class="nav-link text-dark" asp-controller="FavoriteItem" asp-action="Index">Favorite Items</a>
+                            </li>
+                        }
                     </ul>
                     <div class="cart"><ion-icon name="cart-outline"></ion-icon></div>
                     <partial name="_LoginPartial" />

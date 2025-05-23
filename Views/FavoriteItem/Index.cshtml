@@ -1,0 +1,35 @@
+﻿@model IEnumerable<KickVault.ViewModels.FavoriteViewModel>
+
+<h2>Your Favorite Items</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Model</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>ReleaseDate</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.ImageURL" alt="@item.Model" width="100" />
+                </td>
+                <td>@item.Model</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.Size</td>
+                <td>@item.ReleaseDate</td>
+                <td>
+                    <a asp-action="RemoveFavoriteItem" asp-route-itemId="@item.ItemId" class="btn btn-danger">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

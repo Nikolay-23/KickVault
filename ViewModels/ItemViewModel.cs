@@ -4,6 +4,12 @@ namespace KickVault.ViewModels
 {
     public class ItemViewModel
     {
+        public ItemViewModel()
+        {
+            ReleaseDate = DateTime.Today;
+        }
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Photo of the item is Required!")]
         public string ImageURL { get; set; } = null!;
 
@@ -18,5 +24,7 @@ namespace KickVault.ViewModels
 
         [Required(ErrorMessage = "Size is Required!")]
         public int? Size { get; set; }
+        [Required(ErrorMessage = "Release Date is Required!")]
+        public DateTime ReleaseDate { get; set; }
     }
 }
